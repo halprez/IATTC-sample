@@ -25,7 +25,7 @@ pip install -r requirements.txt
 python iattc_crawler.py
 ```
 
-## 🔧 Configuration Options
+## Configuration Options
 
 ```python
 @dataclass
