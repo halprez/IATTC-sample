@@ -1,6 +1,8 @@
+
 #!/usr/bin/env python3
 """
-IATTC Data Crwaler— Monitors IATTC Public domain data site for changes, downloads zip files, and converts CSV to JSON
+IATTC Data Crwaler Monitors IATTC Public domain data site for changes, 
+downloads zip files, and converts CSV to JSON
 
 Author: Alejandro Perez
 """
