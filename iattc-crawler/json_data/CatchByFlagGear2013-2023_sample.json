@@ -1,0 +1,1347 @@
+[
+ 
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BZX",
+    "t": 754
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "CGX",
+    "t": 5
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "DOX",
+    "t": 37
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "MLS",
+    "t": 7
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "MZZ",
+    "t": 5
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "PBF",
+    "t": 3399
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SFA",
+    "t": 3
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SKH",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SKJ",
+    "t": 11846
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SRX",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SSP",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SWO",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "TUN",
+    "t": 3
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "MEX",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "YFT",
+    "t": 143107
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BET",
+    "t": 1637
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BIL",
+    "t": 2
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BKJ",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BLM",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BUM",
+    "t": 2
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "CGX",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "DOX",
+    "t": 20
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "MZZ",
+    "t": 3
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SFA",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SKH",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SKJ",
+    "t": 8872
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SRX",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SSP",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "TUN",
+    "t": 6
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "NIC",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "YFT",
+    "t": 10123
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "HAR",
+    "EspeciesSpecies": "ALB",
+    "t": 3
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "HAR",
+    "EspeciesSpecies": "MLS",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "HAR",
+    "EspeciesSpecies": "SWO",
+    "t": 47
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "ALB",
+    "t": 3485
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BET",
+    "t": 943
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BLM",
+    "t": 78
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BUM",
+    "t": 153
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "DOX",
+    "t": 74
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "MLS",
+    "t": 111
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "MZZ",
+    "t": 252
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "PBF",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SFA",
+    "t": 9
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SKH",
+    "t": 909
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SKJ",
+    "t": 9
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SSP",
+    "t": 5
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SWO",
+    "t": 1506
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "YFT",
+    "t": 1014
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "ALB",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BET",
+    "t": 6921
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BIL",
+    "t": 5
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BKJ",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BLM",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BUM",
+    "t": 11
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "CGX",
+    "t": 2
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "DOX",
+    "t": 31
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "MLS",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "MZZ",
+    "t": 10
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SFA",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SKH",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SKJ",
+    "t": 28276
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SRX",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SWO",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "TUN",
+    "t": 9
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "OTR",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "YFT",
+    "t": 6127
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "ALB",
+    "t": 3
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BET",
+    "t": 58
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BKJ",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BLM",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BUM",
+    "t": 4
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "DOX",
+    "t": 14
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "MLS",
+    "t": 42
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "MZZ",
+    "t": 48
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SFA",
+    "t": 51
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SKH",
+    "t": 221
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SKJ",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SWO",
+    "t": 393
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "YFT",
+    "t": 80
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BET",
+    "t": 5497
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BIL",
+    "t": 8
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BKJ",
+    "t": 38
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BLM",
+    "t": 5
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BUM",
+    "t": 22
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "CGX",
+    "t": 2
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "DOX",
+    "t": 111
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "MLS",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "MZZ",
+    "t": 34
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SFA",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SKH",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SKJ",
+    "t": 53849
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SRX",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SSP",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SWO",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "TUN",
+    "t": 86
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PAN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "YFT",
+    "t": 35113
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PER",
+    "ArteGear": "UNK",
+    "EspeciesSpecies": "ALB",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PER",
+    "ArteGear": "UNK",
+    "EspeciesSpecies": "BKJ",
+    "t": 12
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PER",
+    "ArteGear": "UNK",
+    "EspeciesSpecies": "BXQ",
+    "t": 13
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PER",
+    "ArteGear": "UNK",
+    "EspeciesSpecies": "BZX",
+    "t": 64830
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PER",
+    "ArteGear": "UNK",
+    "EspeciesSpecies": "DOX",
+    "t": 22849
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PER",
+    "ArteGear": "UNK",
+    "EspeciesSpecies": "SKH",
+    "t": 5477
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PER",
+    "ArteGear": "UNK",
+    "EspeciesSpecies": "SKJ",
+    "t": 80
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PER",
+    "ArteGear": "UNK",
+    "EspeciesSpecies": "SWO",
+    "t": 268
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PER",
+    "ArteGear": "UNK",
+    "EspeciesSpecies": "TUN",
+    "t": 424
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "PER",
+    "ArteGear": "UNK",
+    "EspeciesSpecies": "YFT",
+    "t": 396
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "TWN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "ALB",
+    "t": 4306
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "TWN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BET",
+    "t": 5056
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "TWN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BIL",
+    "t": 42
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "TWN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BLM",
+    "t": 3
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "TWN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BUM",
+    "t": 377
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "TWN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "MLS",
+    "t": 244
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "TWN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SKH",
+    "t": 1070
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "TWN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SKJ",
+    "t": 81
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "TWN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SWO",
+    "t": 1656
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "TWN",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "YFT",
+    "t": 1217
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "GN",
+    "EspeciesSpecies": "MZZ",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "GN",
+    "EspeciesSpecies": "PBF",
+    "t": 16
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "GN",
+    "EspeciesSpecies": "SKH",
+    "t": 21
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "GN",
+    "EspeciesSpecies": "SWO",
+    "t": 37
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "ALB",
+    "t": 242
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BET",
+    "t": 1274
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BIL",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BUM",
+    "t": 24
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "DOX",
+    "t": 42
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "MLS",
+    "t": 14
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "MZZ",
+    "t": 244
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "PBF",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SFA",
+    "t": 2
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SKH",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SKJ",
+    "t": 5
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SSP",
+    "t": 22
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SWO",
+    "t": 94
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "YFT",
+    "t": 257
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LTL",
+    "EspeciesSpecies": "ALB",
+    "t": 3161
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LTL",
+    "EspeciesSpecies": "CGX",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LTL",
+    "EspeciesSpecies": "DOX",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LTL",
+    "EspeciesSpecies": "PBF",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "LTL",
+    "EspeciesSpecies": "SKJ",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "OTR",
+    "EspeciesSpecies": "ALB",
+    "t": 10
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "OTR",
+    "EspeciesSpecies": "BET",
+    "t": 157
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "OTR",
+    "EspeciesSpecies": "DOX",
+    "t": 5
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "OTR",
+    "EspeciesSpecies": "PBF",
+    "t": 165
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "OTR",
+    "EspeciesSpecies": "SKH",
+    "t": 25
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "OTR",
+    "EspeciesSpecies": "SWO",
+    "t": 32
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "OTR",
+    "EspeciesSpecies": "YFT",
+    "t": 88
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "ALB",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BET",
+    "t": 3050
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BIL",
+    "t": 2
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BKJ",
+    "t": 5
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BLM",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BUM",
+    "t": 16
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BZX",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "CGX",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "DOX",
+    "t": 74
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "MZZ",
+    "t": 7
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "PBF",
+    "t": 3
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SKH",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SKJ",
+    "t": 29287
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SRX",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "TUN",
+    "t": 6
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "YFT",
+    "t": 4700
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "RG",
+    "EspeciesSpecies": "ALB",
+    "t": 567
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "RG",
+    "EspeciesSpecies": "DOX",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "RG",
+    "EspeciesSpecies": "PBF",
+    "t": 1887
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "USA",
+    "ArteGear": "RG",
+    "EspeciesSpecies": "SKH",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BET",
+    "t": 20
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BIL",
+    "t": 2
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BKJ",
+    "t": 8
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BLM",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BUM",
+    "t": 4
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "BZX",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "CGX",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "DOX",
+    "t": 10
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "MZZ",
+    "t": 2
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SFA",
+    "t": 5
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SKH",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SKJ",
+    "t": 2896
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SRX",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "SWO",
+    "t": 0
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "TUN",
+    "t": 2
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VEN",
+    "ArteGear": "PS",
+    "EspeciesSpecies": "YFT",
+    "t": 24017
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VUT",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "ALB",
+    "t": 238
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VUT",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BET",
+    "t": 700
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VUT",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BLM",
+    "t": 3
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VUT",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "BUM",
+    "t": 47
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VUT",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "DOX",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VUT",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "MLS",
+    "t": 41
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VUT",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "MZZ",
+    "t": 77
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VUT",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SFA",
+    "t": 1
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VUT",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SKH",
+    "t": 76
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VUT",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SKJ",
+    "t": 2
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VUT",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SSP",
+    "t": 5
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VUT",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "SWO",
+    "t": 447
+  },
+  {
+    "AnoYear": 2023,
+    "BanderaFlag": "VUT",
+    "ArteGear": "LL",
+    "EspeciesSpecies": "YFT",
+    "t": 143
+  }
+]
