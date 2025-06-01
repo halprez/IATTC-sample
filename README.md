@@ -2,7 +2,7 @@
 
 A comprehensive suite of interactive web applications for exploring and analyzing Inter-American Tropical Tuna Commission (IATTC) public domain fisheries data in the Eastern Pacific Ocean.
 
-**[🔗 Live Demo](https://alexperex.me/IATTC-sample)**
+**[🔗 Live Demo](https://alexperez.me/IATTC-sample/)**
 
 ## 🎯 Overview
 
