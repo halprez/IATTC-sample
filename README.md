@@ -147,6 +147,4 @@ This project is open source and available under the [MIT License](LICENSE).
 - **Built with**: Visual Studio Code
 - **Development Time**: 8h
 - **Languages**: HTML, CSS, JavaScript, Python
-## 🙏 Acknowledgments
 
-### Data Provider: **Inter-American Tropical Tuna Commission (IATTC)**
