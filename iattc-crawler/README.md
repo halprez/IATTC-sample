@@ -3,14 +3,14 @@
 ## Set up Virtual Environment (Recommended)
 
 ### Create virtual environment
-python -m venv iattc_monitor_env
+python -m venv .iattc_venv
 
 #### Activate virtual environment
 ##### On Windows:
-iattc_monitor_env\Scripts\activate
+.iattc_venv\Scripts\activate
 
 ##### On macOS/Linux:
-source iattc_monitor_env/bin/activate
+source .iattc__venv/bin/activate
 
 ##### Verify activation (should show virtual environment path)
 which python
