@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IATTC Data Validator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2563eb;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .upload-area {
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .upload-area:hover {
+            border-color: #2563eb;
+            background-color: #f8fafc;
+        }
+        .upload-area.dragover {
+            border-color: #2563eb;
+            background-color: #e6f3ff;
+        }
+        #fileInput {
+            display: none;
+        }
+        .results {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+        }
+        .success {
+            background-color: #d1fae5;
+            border: 1px solid #10b981;
+            color: #065f46;
+        }
+        .error {
+            background-color: #fee2e2;
+            border: 1px solid #ef4444;
+            color: #991b1b;
+        }
+        .warning {
+            background-color: #fef3c7;
+            border: 1px solid #f59e0b;
+            color: #92400e;
+        }
+        .info {
+            background-color: #e0f2fe;
+            border: 1px solid #0891b2;
+            color: #164e63;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 5px;
+        }
+        .issues-list {
+            margin-top: 15px;
+        }
+        .issue-item {
+            padding: 8px 12px;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .issue-error {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+        .issue-warning {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+        .sample-download {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .sample-download a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .sample-download a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐟 IATTC Data Validator</h1>
+        <p class="subtitle">Validate your tuna catch data before uploading to the explorer</p>
+        
+        <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+            <p><strong>Click here or drag & drop your JSON file</strong></p>
+            <p>Supports: .json files</p>
+            <input type="file" id="fileInput" accept=".json" />
+        </div>
+        
+        <div id="results" class="results">
+            <!-- Results will be populated here -->
+        </div>
+        
+        <div class="sample-download">
+            <p>Need a sample file? <a href="#" onclick="downloadSample()">Download sample data structure</a></p>
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const uploadArea = document.querySelector('.upload-area');
+        const results = document.getElementById('results');
+
+        // Expected data structure
+        const requiredFields = ['AnoYear', 'BanderaFlag', 'ArteGear', 'EspeciesSpecies', 't'];
+        
+        const validSpecies = ['ALB', 'BET', 'BIL', 'BKJ', 'BLM', 'BUM', 'BXQ', 'BZX', 'CGX', 'DOX', 'MLS', 'MZZ', 'PBF', 'SFA', 'SKH', 'SKJ', 'SRX', 'SSP', 'SWO', 'TUN', 'YFT'];
+        const validGears = ['PS', 'LL', 'HAR', 'UNK', 'GN', 'LTL', 'OTR', 'RG'];
+        const validFlags = ['MEX', 'NIC', 'OTR', 'PAN', 'PER', 'TWN', 'USA', 'VEN', 'VUT'];
+
+        // Drag and drop handlers
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                validateFile(files[0]);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                validateFile(e.target.files[0]);
+            }
+        });
+
+        function validateFile(file) {
+            if (!file.name.toLowerCase().endsWith('.json')) {
+                showResults('error', 'Invalid file type. Please select a JSON file.');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    validateData(data, file.name);
+                } catch (error) {
+                    showResults('error', `Invalid JSON format: ${error.message}`);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function validateData(data, filename) {
+            const validation = {
+                isValid: true,
+                errors: [],
+                warnings: [],
+                stats: {}
+            };
+
+            // Check if data is an array
+            if (!Array.isArray(data)) {
+                validation.errors.push('Data must be an array of records');
+                validation.isValid = false;
+                showResults('error', 'Validation failed', validation);
+                return;
+            }
+
+            // Check if data is not empty
+            if (data.length === 0) {
+                validation.errors.push('Data array is empty');
+                validation.isValid = false;
+                showResults('error', 'Validation failed', validation);
+                return;
+            }
+
+            // Validate each record
+            const fieldStats = {};
+            const missingFields = new Set();
+            const invalidValues = {
+                species: new Set(),
+                gears: new Set(),
+                flags: new Set(),
+                years: new Set()
+            };
+
+            data.forEach((record, index) => {
+                // Check required fields
+                requiredFields.forEach(field => {
+                    if (!(field in record)) {
+                        missingFields.add(field);
+                        validation.errors.push(`Record ${index + 1}: Missing field '${field}'`);
+                        validation.isValid = false;
+                    } else {
+                        if (!fieldStats[field]) fieldStats[field] = new Set();
+                        fieldStats[field].add(record[field]);
+                    }
+                });
+
+                // Validate field values
+                if ('AnoYear' in record) {
+                    const year = record.AnoYear;
+                    if (typeof year !== 'number' || year < 2000 || year > new Date().getFullYear()) {
+                        invalidValues.years.add(year);
+                        validation.warnings.push(`Record ${index + 1}: Unusual year value '${year}'`);
+                    }
+                }
+
+                if ('EspeciesSpecies' in record && !validSpecies.includes(record.EspeciesSpecies)) {
+                    invalidValues.species.add(record.EspeciesSpecies);
+                    validation.warnings.push(`Record ${index + 1}: Unknown species code '${record.EspeciesSpecies}'`);
+                }
+
+                if ('ArteGear' in record && !validGears.includes(record.ArteGear)) {
+                    invalidValues.gears.add(record.ArteGear);
+                    validation.warnings.push(`Record ${index + 1}: Unknown gear code '${record.ArteGear}'`);
+                }
+
+                if ('BanderaFlag' in record && !validFlags.includes(record.BanderaFlag)) {
+                    invalidValues.flags.add(record.BanderaFlag);
+                    validation.warnings.push(`Record ${index + 1}: Unknown flag code '${record.BanderaFlag}'`);
+                }
+
+                if ('t' in record) {
+                    const catch_value = record.t;
+                    if (typeof catch_value !== 'number' || catch_value < 0) {
+                        validation.errors.push(`Record ${index + 1}: Invalid catch value '${catch_value}' (must be non-negative number)`);
+                        validation.isValid = false;
+                    }
+                }
+            });
+
+            // Calculate statistics
+            validation.stats = {
+                totalRecords: data.length,
+                uniqueYears: fieldStats.AnoYear ? fieldStats.AnoYear.size : 0,
+                uniqueFlags: fieldStats.BanderaFlag ? fieldStats.BanderaFlag.size : 0,
+                uniqueGears: fieldStats.ArteGear ? fieldStats.ArteGear.size : 0,
+                uniqueSpecies: fieldStats.EspeciesSpecies ? fieldStats.EspeciesSpecies.size : 0,
+                totalCatch: data.reduce((sum, record) => sum + (record.t || 0), 0),
+                fileSize: `${(JSON.stringify(data).length / 1024).toFixed(1)} KB`
+            };
+
+            // Show results
+            const resultType = validation.isValid ? (validation.warnings.length > 0 ? 'warning' : 'success') : 'error';
+            showResults(resultType, validation.isValid ? 'Validation successful!' : 'Validation failed', validation, filename);
+        }
+
+        function showResults(type, message, validation = null, filename = '') {
+            results.style.display = 'block';
+            results.className = `results ${type}`;
+            
+            let html = `<h3>${message}</h3>`;
+            
+            if (filename) {
+                html += `<p><strong>File:</strong> ${filename}</p>`;
+            }
+
+            if (validation) {
+                // Statistics
+                html += '<div class="stats-grid">';
+                Object.entries(validation.stats).forEach(([key, value]) => {
+                    const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+                    html += `
+                        <div class="stat-card">
+                            <div class="stat-value">${typeof value === 'number' ? value.toLocaleString() : value}</div>
+                            <div class="stat-label">${label}</div>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+
+                // Issues
+                if (validation.errors.length > 0 || validation.warnings.length > 0) {
+                    html += '<div class="issues-list">';
+                    html += '<h4>Issues Found:</h4>';
+                    
+                    validation.errors.forEach(error => {
+                        html += `<div class="issue-item issue-error">❌ ${error}</div>`;
+                    });
+                    
+                    validation.warnings.forEach(warning => {
+                        html += `<div class="issue-item issue-warning">⚠️ ${warning}</div>`;
+                    });
+                    
+                    html += '</div>';
+                }
+
+                // Recommendations
+                if (validation.isValid) {
+                    html += '<div style="margin-top: 20px;">';
+                    html += '<h4>✅ Your data is ready to use!</h4>';
+                    html += '<p>You can now upload this file to your IATTC Tuna Catch Data Explorer.</p>';
+                    if (validation.warnings.length > 0) {
+                        html += '<p><small>Note: Warnings indicate potential data quality issues but won\'t prevent the application from working.</small></p>';
+                    }
+                    html += '</div>';
+                } else {
+                    html += '<div style="margin-top: 20px;">';
+                    html += '<h4>❌ Please fix the errors before using this data.</h4>';
+                    html += '<p>The data explorer requires all records to have the correct structure and field types.</p>';
+                    html += '</div>';
+                }
+            }
+
+            results.innerHTML = html;
+        }
+
+        function downloadSample() {
+            const sampleData = [
+                {
+                    "AnoYear": 2023,
+                    "BanderaFlag": "MEX",
+                    "ArteGear": "PS",
+                    "EspeciesSpecies": "YFT",
+                    "t": 143107
+                },
+                {
+                    "AnoYear": 2023,
+                    "BanderaFlag": "USA",
+                    "ArteGear": "PS",
+                    "EspeciesSpecies": "SKJ",
+                    "t": 29287
+                },
+                {
+                    "AnoYear": 2023,
+                    "BanderaFlag": "TWN",
+                    "ArteGear": "LL",
+                    "EspeciesSpecies": "ALB",
+                    "t": 4306
+                }
+            ];
+
+            const blob = new Blob([JSON.stringify(sampleData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'sample_iattc_data.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
