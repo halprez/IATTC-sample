@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IATTC Purse Seine Geo Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@8.2.0/ol.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🗺️ IATTC Purse Seine Geo Explorer</h1>
+                <p>Interactive mapping of purse seine tuna catches in the Eastern Pacific Ocean (2013-2023)</p>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-tabs">
+            <button class="nav-tab active" data-tab="map">Interactive Map</button>
+            <button class="nav-tab" data-tab="statistics">Statistics</button>
+            <button class="nav-tab" data-tab="temporal">Temporal Analysis</button>
+            <button class="nav-tab" data-tab="details">Data Details</button>
+        </nav>
+
+        <!-- Control Panel -->
+        <section class="control-panel">
+            <div class="control-container">
+                <!-- Time Controls -->
+                <div class="control-group">
+                    <label for="yearFilter">Year:</label>
+                    <select id="yearFilter">
+                        <option value="">All Years</option>
+                        <!-- Populated by JavaScript -->
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label for="monthFilter">Month:</label>
+                    <select id="monthFilter">
+                        <option value="">All Months</option>
+                        <!-- Populated by JavaScript -->
+                    </select>
+                </div>
+
+                <!-- Fishing Controls -->
+                <div class="control-group">
+                    <label for="setTypeFilter">Set Type:</label>
+                    <select id="setTypeFilter">
+                        <option value="">All Types</option>
+                        <option value="DEL">Dolphin Associated</option>
+                        <option value="NOA">No Association</option>
+                        <option value="OBJ">Floating Object</option>
+                        <option value="UNA">Unassociated</option>
+                    </select>
+                </div>
+
+                <!-- Species Controls -->
+                <div class="control-group">
+                    <label for="speciesFilter">Primary Species:</label>
+                    <select id="speciesFilter">
+                        <option value="">All Species</option>
+                        <option value="YFT">Yellowfin Tuna</option>
+                        <option value="SKJ">Skipjack Tuna</option>
+                        <option value="BET">Bigeye Tuna</option>
+                        <option value="ALB">Albacore</option>
+                        <option value="PBF">Pacific Bluefin</option>
+                    </select>
+                </div>
+
+                <!-- Map Display Controls -->
+                <div class="control-group">
+                    <label for="displayMetric">Display Metric:</label>
+                    <select id="displayMetric">
+                        <option value="total_catch">Total Catch</option>
+                        <option value="num_sets">Number of Sets</option>
+                        <option value="cpue">Catch per Set</option>
+                        <option value="yft_catch">Yellowfin Catch</option>
+                        <option value="skj_catch">Skipjack Catch</option>
+                    </select>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="control-group">
+                    <button id="resetFilters" class="btn-secondary">Reset Filters</button>
+                    <button id="exportData" class="btn-primary">Export View</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Map Tab -->
+            <div id="map" class="tab-content active">
+                <div class="map-container">
+                    <div id="mapView" class="map-view"></div>
+                    
+                    <!-- Map Legend -->
+                    <div class="map-legend">
+                        <h4>Catch Intensity</h4>
+                        <div class="legend-scale">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #fee2e2;"></div>
+                                <span>Low</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #fbbf24;"></div>
+                                <span>Medium</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #f59e0b;"></div>
+                                <span>High</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #dc2626;"></div>
+                                <span>Very High</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Info Panel -->
+                    <div id="mapInfo" class="map-info-panel">
+                        <h4>Cell Information</h4>
+                        <div id="cellDetails">
+                            <p>Click on a cell to see details</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Tab -->
+            <div id="statistics" class="tab-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Catch</h3>
+                        <div class="stat-value" id="totalCatch">-</div>
+                        <div class="stat-unit">tonnes</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Sets</h3>
+                        <div class="stat-value" id="totalSets">-</div>
+                        <div class="stat-unit">fishing sets</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Active Cells</h3>
+                        <div class="stat-value" id="activeCells">-</div>
+                        <div class="stat-unit">1°x1° areas</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>CPUE</h3>
+                        <div class="stat-value" id="avgCPUE">-</div>
+                        <div class="stat-unit">tonnes/set</div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h3>Catch by Species</h3>
+                        <canvas id="speciesChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Catch by Set Type</h3>
+                        <canvas id="setTypeChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Monthly Distribution</h3>
+                        <canvas id="monthlyChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Spatial Distribution</h3>
+                        <canvas id="spatialChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Temporal Analysis Tab -->
+            <div id="temporal" class="tab-content">
+                <div class="temporal-controls">
+                    <div class="control-group">
+                        <label for="temporalMetric">Metric:</label>
+                        <select id="temporalMetric">
+                            <option value="total_catch">Total Catch</option>
+                            <option value="num_sets">Number of Sets</option>
+                            <option value="cpue">CPUE</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="temporalGrouping">Group by:</label>
+                        <select id="temporalGrouping">
+                            <option value="month">Month</option>
+                            <option value="year">Year</option>
+                            <option value="season">Season</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="chart-container-large">
+                    <h3>Temporal Trends</h3>
+                    <canvas id="temporalChart"></canvas>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h3>Seasonal Patterns</h3>
+                        <canvas id="seasonalChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Inter-annual Variability</h3>
+                        <canvas id="interannualChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details Tab -->
+            <div id="details" class="tab-content">
+                <div class="data-table-container">
+                    <div class="table-controls">
+                        <input type="text" id="searchTable" placeholder="Search coordinates, set type, or catch data...">
+                        <div class="table-actions">
+                            <span id="recordCount">0 records</span>
+                            <button id="downloadCSV" class="btn-secondary">Download CSV</button>
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="dataTable">
+                            <thead>
+                                <tr>
+                                    <th data-sort="Year">Year</th>
+                                    <th data-sort="Month">Month</th>
+                                    <th data-sort="LatC1">Latitude</th>
+                                    <th data-sort="LonC1">Longitude</th>
+                                    <th data-sort="SetType">Set Type</th>
+                                    <th data-sort="NumSets">Sets</th>
+                                    <th data-sort="total_catch">Total Catch</th>
+                                    <th data-sort="YFT">YFT</th>
+                                    <th data-sort="SKJ">SKJ</th>
+                                    <th data-sort="BET">BET</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Loading Overlay -->
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="loading-spinner"></div>
+            <p>Loading fishing data...</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Data source: <a href="https://www.iattc.org/" target="_blank">Inter-American Tropical Tuna Commission (IATTC)</a></p>
+            <p>Eastern Pacific Ocean Purse Seine Fishery Data - Public Domain</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/ol@8.2.0/dist/ol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/dataService.js"></script>
+    <script src="js/mapService.js"></script>
+    <script src="js/chartService.js"></script>
+    <script src="js/filterManager.js"></script>
+    <script src="js/tableManager.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

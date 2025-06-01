@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IATTC Tuna Catch Data Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🐟 IATTC Tuna Catch Data Explorer</h1>
+                <p>Interactive analysis of tuna catches by flag and gear (2013-2023)</p>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-tabs">
+            <button class="nav-tab active" data-tab="overview">Overview</button>
+            <button class="nav-tab" data-tab="trends">Trends</button>
+            <button class="nav-tab" data-tab="comparison">Comparison</button>
+            <button class="nav-tab" data-tab="details">Details</button>
+        </nav>
+
+        <!-- Filters -->
+        <section class="filters-section">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="yearFilter">Year Range:</label>
+                    <select id="yearFilter" multiple>
+                        <!-- Populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="flagFilter">Flags:</label>
+                    <select id="flagFilter" multiple>
+                        <!-- Populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="gearFilter">Gear Types:</label>
+                    <select id="gearFilter" multiple>
+                        <!-- Populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="speciesFilter">Species:</label>
+                    <select id="speciesFilter" multiple>
+                        <!-- Populated by JavaScript -->
+                    </select>
+                </div>
+                <button id="resetFilters" class="btn-secondary">Reset Filters</button>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Overview Tab -->
+            <div id="overview" class="tab-content active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Catch</h3>
+                        <div class="stat-value" id="totalCatch">-</div>
+                        <div class="stat-unit">tonnes</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Countries</h3>
+                        <div class="stat-value" id="totalFlags">-</div>
+                        <div class="stat-unit">flags</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Gear Types</h3>
+                        <div class="stat-value" id="totalGears">-</div>
+                        <div class="stat-unit">types</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Species</h3>
+                        <div class="stat-value" id="totalSpecies">-</div>
+                        <div class="stat-unit">tracked</div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h3>Catch by Species</h3>
+                        <canvas id="speciesChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Catch by Flag</h3>
+                        <canvas id="flagChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trends Tab -->
+            <div id="trends" class="tab-content">
+                <div class="chart-container-large">
+                    <h3>Catch Trends Over Time</h3>
+                    <canvas id="trendsChart"></canvas>
+                </div>
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h3>Gear Type Distribution</h3>
+                        <canvas id="gearChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Top Species by Year</h3>
+                        <canvas id="speciesTrendsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Tab -->
+            <div id="comparison" class="tab-content">
+                <div class="comparison-controls">
+                    <div class="control-group">
+                        <label for="compareBy">Compare by:</label>
+                        <select id="compareBy">
+                            <option value="flag">Flag</option>
+                            <option value="gear">Gear Type</option>
+                            <option value="species">Species</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="metricBy">Metric:</label>
+                        <select id="metricBy">
+                            <option value="total">Total Catch</option>
+                            <option value="average">Average per Year</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-container-large">
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Details Tab -->
+            <div id="details" class="tab-content">
+                <div class="data-table-container">
+                    <div class="table-controls">
+                        <input type="text" id="searchTable" placeholder="Search data...">
+                        <span id="recordCount">0 records</span>
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="dataTable">
+                            <thead>
+                                <tr>
+                                    <th data-sort="AnoYear">Year</th>
+                                    <th data-sort="BanderaFlag">Flag</th>
+                                    <th data-sort="ArteGear">Gear</th>
+                                    <th data-sort="EspeciesSpecies">Species</th>
+                                    <th data-sort="t">Catch (tonnes)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Loading Overlay -->
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="loading-spinner"></div>
+            <p>Loading data...</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Data source: <a href="https://www.iattc.org/" target="_blank">Inter-American Tropical Tuna Commission (IATTC)</a></p>
+            <p>Public Domain Data - Built with ❤️ for ocean conservation</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="js/dataService.js"></script>
+    <script src="js/chartRenderer.js"></script>
+    <script src="js/filterManager.js"></script>
+    <script src="js/tableManager.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

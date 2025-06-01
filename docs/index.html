@@ -3,186 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IATTC Tuna Catch Data Explorer</title>
+    <title>IATTC Data Explorer Hub</title>
+    <meta name="description" content="Interactive visualization tools for IATTC tuna fisheries data in the Eastern Pacific Ocean">
+    <meta name="keywords" content="IATTC, tuna, fisheries, data visualization, Eastern Pacific Ocean, marine conservation">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐟</text></svg>">
 </head>
 <body>
-    <div class="app-container">
-        <!-- Header -->
-        <header class="header">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
             <div class="header-content">
-                <h1>🐟 IATTC Tuna Catch Data Explorer</h1>
-                <p>Interactive analysis of tuna catches by flag and gear (2013-2023)</p>
+                <h1 class="logo">
+                    <span class="logo-icon">🌊</span>
+                    IATTC Data Explorer Example
+                </h1>
+                <p class="tagline">Interactive visualization tools for IATTC Public Domain Data</p>
             </div>
-        </header>
-
-        <!-- Navigation -->
-        <nav class="nav-tabs">
-            <button class="nav-tab active" data-tab="overview">Overview</button>
-            <button class="nav-tab" data-tab="trends">Trends</button>
-            <button class="nav-tab" data-tab="comparison">Comparison</button>
-            <button class="nav-tab" data-tab="details">Details</button>
-        </nav>
-
-        <!-- Filters -->
-        <section class="filters-section">
-            <div class="filters-container">
-                <div class="filter-group">
-                    <label for="yearFilter">Year Range:</label>
-                    <select id="yearFilter" multiple>
-                        <!-- Populated by JavaScript -->
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="flagFilter">Flags:</label>
-                    <select id="flagFilter" multiple>
-                        <!-- Populated by JavaScript -->
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="gearFilter">Gear Types:</label>
-                    <select id="gearFilter" multiple>
-                        <!-- Populated by JavaScript -->
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="speciesFilter">Species:</label>
-                    <select id="speciesFilter" multiple>
-                        <!-- Populated by JavaScript -->
-                    </select>
-                </div>
-                <button id="resetFilters" class="btn-secondary">Reset Filters</button>
-            </div>
-        </section>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Overview Tab -->
-            <div id="overview" class="tab-content active">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <h3>Total Catch</h3>
-                        <div class="stat-value" id="totalCatch">-</div>
-                        <div class="stat-unit">tonnes</div>
-                    </div>
-                    <div class="stat-card">
-                        <h3>Countries</h3>
-                        <div class="stat-value" id="totalFlags">-</div>
-                        <div class="stat-unit">flags</div>
-                    </div>
-                    <div class="stat-card">
-                        <h3>Gear Types</h3>
-                        <div class="stat-value" id="totalGears">-</div>
-                        <div class="stat-unit">types</div>
-                    </div>
-                    <div class="stat-card">
-                        <h3>Species</h3>
-                        <div class="stat-value" id="totalSpecies">-</div>
-                        <div class="stat-unit">tracked</div>
-                    </div>
-                </div>
-
-                <div class="charts-grid">
-                    <div class="chart-container">
-                        <h3>Catch by Species</h3>
-                        <canvas id="speciesChart"></canvas>
-                    </div>
-                    <div class="chart-container">
-                        <h3>Catch by Flag</h3>
-                        <canvas id="flagChart"></canvas>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trends Tab -->
-            <div id="trends" class="tab-content">
-                <div class="chart-container-large">
-                    <h3>Catch Trends Over Time</h3>
-                    <canvas id="trendsChart"></canvas>
-                </div>
-                <div class="charts-grid">
-                    <div class="chart-container">
-                        <h3>Gear Type Distribution</h3>
-                        <canvas id="gearChart"></canvas>
-                    </div>
-                    <div class="chart-container">
-                        <h3>Top Species by Year</h3>
-                        <canvas id="speciesTrendsChart"></canvas>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Comparison Tab -->
-            <div id="comparison" class="tab-content">
-                <div class="comparison-controls">
-                    <div class="control-group">
-                        <label for="compareBy">Compare by:</label>
-                        <select id="compareBy">
-                            <option value="flag">Flag</option>
-                            <option value="gear">Gear Type</option>
-                            <option value="species">Species</option>
-                        </select>
-                    </div>
-                    <div class="control-group">
-                        <label for="metricBy">Metric:</label>
-                        <select id="metricBy">
-                            <option value="total">Total Catch</option>
-                            <option value="average">Average per Year</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="chart-container-large">
-                    <canvas id="comparisonChart"></canvas>
-                </div>
-            </div>
-
-            <!-- Details Tab -->
-            <div id="details" class="tab-content">
-                <div class="data-table-container">
-                    <div class="table-controls">
-                        <input type="text" id="searchTable" placeholder="Search data...">
-                        <span id="recordCount">0 records</span>
-                    </div>
-                    <div class="table-wrapper">
-                        <table id="dataTable">
-                            <thead>
-                                <tr>
-                                    <th data-sort="AnoYear">Year</th>
-                                    <th data-sort="BanderaFlag">Flag</th>
-                                    <th data-sort="ArteGear">Gear</th>
-                                    <th data-sort="EspeciesSpecies">Species</th>
-                                    <th data-sort="t">Catch (tonnes)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Populated by JavaScript -->
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- Loading Overlay -->
-        <div id="loadingOverlay" class="loading-overlay">
-            <div class="loading-spinner"></div>
-            <p>Loading data...</p>
         </div>
+    </header>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>Data source: <a href="https://www.iattc.org/" target="_blank">Inter-American Tropical Tuna Commission (IATTC)</a></p>
-            <p>Public Domain Data - Built with ❤️ for ocean conservation</p>
-        </footer>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Explore EPO Tuna Fisheries Data</h2>
+                <p class="hero-description">
+                    Comprehensive, interactive analysis tools for IATTC public domain data. 
+                    Visualize catch patterns, fishing trends, and spatial distributions 
+                    to support sustainable fisheries management and marine conservation.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">2013-2023</span>
+                        <span class="stat-label">Data Coverage</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Public Domain</span>
+                        <span class="stat-label">Open Access</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">EPO</span>
+                        <span class="stat-label">Eastern Pacific Ocean</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-    <script src="js/dataService.js"></script>
-    <script src="js/chartRenderer.js"></script>
-    <script src="js/filterManager.js"></script>
-    <script src="js/tableManager.js"></script>
-    <script src="js/app.js"></script>
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Applications Grid -->
+            <div class="applications">
+                
+                <!-- Catch by Flag & Gear Explorer -->
+                <div class="app-card" data-app="catch-flag">
+                    <div class="app-icon">
+                        <div class="icon-container">
+                            🐟
+                        </div>
+                    </div>
+                    <div class="app-content">
+                        <h3 class="app-title">Tuna Catch Data Explorer</h3>
+                        <p class="app-subtitle">Catch analysis by flag and gear type</p>
+                        <p class="app-description">
+                            Comprehensive analysis of tuna catches by fishing nation and gear type. 
+                            Explore trends over time, compare fishing fleets, and analyze species 
+                            composition with interactive charts and detailed data tables.
+                        </p>
+                        
+                    </div>
+                    <div class="app-actions">
+                        <a href="catch-by-flag-data/index.html" class="btn btn-primary">
+                            <span>Explore Catch Data</span>
+                            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <div class="app-tech">
+                            <span>Built with Chart.js • Vanilla JS • Modern CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Purse Seine Geo Explorer -->
+                <div class="app-card" data-app="geo-ps">
+                    <div class="app-icon">
+                        <div class="icon-container">
+                            🗺️
+                        </div>
+                    </div>
+                    <div class="app-content">
+                        <h3 class="app-title">Purse Seine Geo Explorer</h3>
+                        <p class="app-subtitle">Spatial mapping of purse seine fishery</p>
+                        <p class="app-description">
+                            Interactive mapping application showing purse seine tuna catches across 
+                            the Eastern Pacific Ocean. Visualize spatial patterns, set types, and 
+                            catch intensity in 1°×1° grid cells with advanced filtering capabilities.
+                        </p>
+                        
+                    </div>
+                    <div class="app-actions">
+                        <a href="geo-ps-data/index.html" class="btn btn-secondary">
+                            <span>Explore Geo Data</span>
+                            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <div class="app-tech">
+                            <span>Built with OpenLayers • Chart.js • Modern Web Standards</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Information Section -->
+            <section class="info-section">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">📊</div>
+                        <h3>Data Source</h3>
+                        <p>
+                            Public Domain dataset from the <strong>Inter-American Tropical Tuna Commission (IATTC)</strong>, 
+                        </p>
+                        <a href="https://www.iattc.org/" target="_blank" class="info-link">
+                            Visit IATTC Website →
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📖</div>
+                        <h3>Open Source</h3>
+                        <p>
+                            Both applications are built with <strong>open web standards</strong> and modern JavaScript. 
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>IATTC Data Explorer Hub</h3>
+                    <p>
+                        Interactive visualization tools for sustainable tuna fisheries management 
+                        in the Eastern Pacific Ocean. Built with modern web technologies for 
+                        researchers, managers, and conservation scientists.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Applications</h4>
+                        <ul>
+                            <li><a href="catch-by-flag-data/index.html">Catch By Flag Data Explorer</a></li>
+                            <li><a href="geo-ps-data/index.html">Geo Mapping Tool</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="https://www.iattc.org/" target="_blank">IATTC Official Site</a></li>
+                            <li><a href="https://www.iattc.org/PublicDomainDataENG.htm" target="_blank">Public Data Portal</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Technology</h4>
+                        <ul>
+                            <li><a href="https://chartjs.org/" target="_blank">Chart.js</a></li>
+                            <li><a href="https://openlayers.org/" target="_blank">OpenLayers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Data source: Inter-American Tropical Tuna Commission (IATTC) - Public Domain Data.</p>
+                <p>Built with ❤️ by Alejandro Perez.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
