@@ -37,7 +37,7 @@ The IATTC Data Explorer Hub provides a data crawler and 2 specialized visualizat
 ## 🚀 Quick Start
 
 ### Option 1: View Online
-Visit the **[Live Demo](https://alexperex.me/IATTC-sample)** to start exploring immediately.
+Visit the **[Live Demo](https://alexperez.me/IATTC-sample)** to start exploring immediately.
 
 ### Option 2: Local Setup
 ```bash
