@@ -1,6 +1,6 @@
 # 🌊 IATTC Data Explorer Hub
 
-A comprehensive suite of interactive web applications for exploring and analyzing Inter-American Tropical Tuna Commission (IATTC) public domain fisheries data in the Eastern Pacific Ocean.
+Two example web applications for exploring and analyzing Inter-American Tropical Tuna Commission (IATTC) public domain fisheries data in the Eastern Pacific Ocean.
 
 **[🔗 Live Demo](https://alexperez.me/IATTC-sample/)**
 
