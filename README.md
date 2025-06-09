@@ -1,4 +1,4 @@
-# 🌊 IATTC Data Explorer Hub
+# 🌊 IATTC Data Explorer
 
 Two example web applications for exploring and analyzing Inter-American Tropical Tuna Commission (IATTC) public domain fisheries data in the Eastern Pacific Ocean.
 
@@ -6,7 +6,7 @@ Two example web applications for exploring and analyzing Inter-American Tropical
 
 ## 🎯 Overview
 
-The IATTC Data Explorer Hub provides a data crawler and 2 specialized visualization tools for analyzing Public Domain Data provided by [IATTC](https://iattc.org):
+The IATTC Data Explorer provides a data crawler and 2 specialized visualization tools for analyzing Public Domain Data provided by [IATTC](https://iattc.org):
 
 1. **🐟 Tuna Catch Data Explorer** - Comprehensive analysis of catch data by fishing nation and gear type
 2. **🗺️ Purse Seine Geo Explorer** - Interactive spatial mapping of purse seine fishing activities
@@ -110,7 +110,7 @@ IATTC-sample/
 
 ### Primary Data Source
 **Inter-American Tropical Tuna Commission (IATTC)**
-- **Website**: [www.iattc.org](https://www.iattc.org/)
+- **Website**: [www.iattc.org](https://www.iattc.org/en-US/Data/Public-domain/)
 
 ### Data Types
 1. **Catch by Flag and Gear**: Total catch by fishing nation and gear type
