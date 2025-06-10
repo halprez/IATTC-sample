@@ -727,7 +727,7 @@ body {
 }
 
 /* Dark mode support */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --bg-primary: #1e293b;
         --bg-secondary: #0f172a;
@@ -737,4 +737,4 @@ body {
         --text-secondary: #cbd5e1;
         --text-muted: #64748b;
     }
-}
+} */
