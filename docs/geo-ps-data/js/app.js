@@ -42,7 +42,7 @@ class PurseSeineApp {
             this.hideLoading();
             
             console.log('🗺️ Purse Seine Geo Explorer initialized successfully');
-            this.showWelcomeMessage();
+            // this.showWelcomeMessage();
             
         } catch (error) {
             console.error('Failed to initialize application:', error);
